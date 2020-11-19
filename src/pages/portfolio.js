@@ -89,7 +89,7 @@ const Portfolio = () => {
       desc:
         "An Online Hotel Reservation website, as it provides a platform for both hoteliers and customers. Hoteliers can manage their hotel rooms and customers can book rooms through the website. Used React, Redux and Node.js along with Express to make the application and MongoDB for the database.",
       stack:
-        "html, css, react, redux, javascript, styled-components, node.js, mongodb, express.js, heroku, cloudinary, contentful",
+        "react, redux, node.js, mongodb, express.js, heroku, cloudinary, contentful",
       demoUrl: "https://backpackers-villa-react.herokuapp.com",
       githubUrl: "https://github.com/PriyangaV/backpackers-villa"
     },
