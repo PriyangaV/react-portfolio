@@ -4,8 +4,7 @@ import {
   FaGithubSquare,
   FaStackOverflow,
   FaChevronUp,
-  FaHeart
-} from "react-icons/fa";
+  } from "react-icons/fa";
 
 const Contact = () => {
   useEffect(() => {
