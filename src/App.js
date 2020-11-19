@@ -22,45 +22,45 @@ const App = () => {
         let outerHeight = elem.offsetHeight;
         if (windowTop > offsetTop - 62 && windowTop < offsetTop + outerHeight) {
           let elemId = elem.getAttribute("id");
-          document.querySelector("nav ul li a.active") &&
+          document.querySelector("nav ul li a.selected") &&
             document
-              .querySelector("nav ul li a.active")
-              .classList.remove("active");
-          document.querySelector("nav ul li a[href='/" + elemId + "']") &&
+              .querySelector("nav ul li a.selected")
+              .classList.remove("selected");
+          document.querySelector("nav ul li a[href='#/" + elemId + "']") &&
             document
-              .querySelector("nav ul li a[href='/" + elemId + "']")
-              .classList.add("active");
-          history.push(`/${elemId}`);
+              .querySelector("nav ul li a[href='#/" + elemId + "']")
+              .classList.add("selected");
+          history.replace(`${elemId}`);
         }
 
-        // home active
+        // home selected
         if (windowTop === 0) {
-          document.querySelector("nav ul li a.active") &&
+          document.querySelector("nav ul li a.selected") &&
             document
-              .querySelector("nav ul li a.active")
-              .classList.remove("active");
-          document.querySelector("nav ul li a[href='/home']") &&
+              .querySelector("nav ul li a.selected")
+              .classList.remove("selected");
+          document.querySelector("nav ul li a[href='#/home']") &&
             document
-              .querySelector("nav ul li a[href='/home']")
-              .classList.add("active");
-          history.push("/home");
+              .querySelector("nav ul li a[href='#/home']")
+              .classList.add("selected");
+          history.replace("home");
         }
 
-        // contact active
+        // contact selected
         if (
           (element.documentElement && element.documentElement.scrollHeight) -
             (element.documentElement && element.documentElement.scrollTop) ===
           (element.documentElement && element.documentElement.clientHeight)
         ) {
-          document.querySelector("nav ul li a.active") &&
+          document.querySelector("nav ul li a.selected") &&
             document
-              .querySelector("nav ul li a.active")
-              .classList.remove("active");
-          document.querySelector("nav ul li a[href='/contact']") &&
+              .querySelector("nav ul li a.selected")
+              .classList.remove("selected");
+          document.querySelector("nav ul li a[href='#/contact']") &&
             document
-              .querySelector("nav ul li a[href='/contact']")
-              .classList.add("active");
-          history.push("/contact");
+              .querySelector("nav ul li a[href='#/contact']")
+              .classList.add("selected");
+          history.replace("contact");
         }
       });
     };

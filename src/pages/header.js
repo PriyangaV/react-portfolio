@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLinkedin, FaGithubSquare, FaStackOverflow } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+// import { NavHashLink as NavLink } from "react-router-hash-link";
 
 const header = () => {
   return (
@@ -16,6 +17,8 @@ const header = () => {
             <NavLink
               to='portfolio'
               className='btn-default hero-btn scroll-link'
+              replace
+              activeClassName='selected'
             >
               view portfolio
             </NavLink>
@@ -49,7 +52,12 @@ const header = () => {
               </a>
             </li>
           </ul>
-          <NavLink to='about' className='nav-link scroll-link page-scroll'>
+          <NavLink
+            replace
+            to='about'
+            activeClassName='selected'
+            className='nav-link scroll-link page-scroll'
+          >
             <div className='icon-scroll'></div>
           </NavLink>
         </div>

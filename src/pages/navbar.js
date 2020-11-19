@@ -6,10 +6,9 @@ import {
   FaBars
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+// import { NavHashLink as NavLink } from "react-router-hash-link";
 
 const Navbar = () => {
-  let history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -19,26 +18,20 @@ const Navbar = () => {
         setIsOpen(false);
         let id = null;
         if (link.classList.contains("page-scroll")) {
-          id = e.target.parentElement.getAttribute("href").slice(1);
+          id = e.target.parentElement.getAttribute("href").slice(2);
         } else {
-          id = e.target.getAttribute("href").slice(1);
+          id = e.target.getAttribute("href").slice(2);
         }
         const element = document.getElementById(id);
         let position = element.offsetTop;
-        document.querySelector("nav ul li a").classList.remove("active");
         window.scrollTo({
           left: 0,
           top: position,
           behavior: "smooth"
         });
-        document.querySelector("nav ul li a[href='/" + element + "']") &&
-          document
-            .querySelector("nav ul li a[href='/" + element + "']")
-            .classList.add("active");
-        history.push(`/${element}`);
       });
     });
-  }, [history]);
+  }, []);
   return (
     <nav className='navbar'>
       <div className='nav-center'>
@@ -49,7 +42,6 @@ const Navbar = () => {
             className='nav-toggle animate-right unreset'
             id='nav-toggle'
             onClick={() => {
-              console.log("ssss", isOpen);
               setIsOpen(!isOpen);
             }}
           >
@@ -61,32 +53,62 @@ const Navbar = () => {
           id='nav-links'
         >
           <li className='animate-left unreset'>
-            <NavLink to='home' className='nav-link scroll-link active'>
+            <NavLink
+              to='home'
+              replace
+              className='nav-link scroll-link selected'
+              activeClassName='selected'
+            >
               home
             </NavLink>
           </li>
           <li className='animate-top unreset'>
-            <NavLink to='about' className='nav-link scroll-link'>
+            <NavLink
+              to='about'
+              replace
+              className='nav-link scroll-link'
+              activeClassName='selected'
+            >
               about
             </NavLink>
           </li>
           <li className='wait animate-bottom unreset'>
-            <NavLink to='services' className='nav-link scroll-link'>
+            <NavLink
+              to='services'
+              replace
+              className='nav-link scroll-link'
+              activeClassName='selected'
+            >
               services
             </NavLink>
           </li>
           <li className='animate-right unreset'>
-            <NavLink to='resume' className='nav-link scroll-link'>
+            <NavLink
+              to='resume'
+              replace
+              className='nav-link scroll-link'
+              activeClassName='selected'
+            >
               resume
             </NavLink>
           </li>
           <li className='animate-left unreset'>
-            <NavLink to='portfolio' className='nav-link scroll-link'>
+            <NavLink
+              to='portfolio'
+              replace
+              className='nav-link scroll-link'
+              activeClassName='selected'
+            >
               portfolio
             </NavLink>
           </li>
           <li className='animate-right unreset'>
-            <NavLink to='contact' className='nav-link scroll-link'>
+            <NavLink
+              to='contact'
+              replace
+              className='nav-link scroll-link'
+              activeClassName='selected'
+            >
               say hello
             </NavLink>
           </li>

@@ -689,7 +689,8 @@ NAVMENU
 .show-links {
   height: 336px;
 }
-.nav-link.active {
+.nav-link.active,
+.nav-link.selected {
   color: var(--theme-color);
 }
 @media screen and (min-width: 992px) {
