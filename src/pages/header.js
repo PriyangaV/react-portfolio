@@ -7,18 +7,18 @@ import banner from "../assets/banner.png";
 
 const HeroContainer = styled.div`
   min-height: 100vh;
-  /* background: linear-gradient(20deg, var(--theme-color-1), rgba(0, 0, 0, 0.7)), */
-  /* url(${banner}) center/cover no-repeat fixed; */
   display: table-cell;
   text-align: center;
   background: linear-gradient(20deg, var(--theme-color-1), rgba(0, 0, 0, 0.7)),
+    url(${banner}) center/cover no-repeat fixed;
+  /* background: linear-gradient(20deg, var(--theme-color-1), rgba(0, 0, 0, 0.7)),
     url(${banner});
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
-  -webkit-background-size: cover;
+  -webkit-background-size: cover; */
 `;
 
 const header = () => {
