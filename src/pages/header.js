@@ -6,7 +6,8 @@ import banner from "../assets/banner.png";
 // import { NavHashLink as NavLink } from "react-router-hash-link";
 
 const HeroContainer = styled.div`
-  min-height: 100vh;
+  min-height: 99vh;
+  width: 99vw;
   display: table-cell;
   text-align: center;
   background: linear-gradient(20deg, var(--theme-color-1), rgba(0, 0, 0, 0.7)),
