@@ -552,7 +552,6 @@ HERO
   -moz-transition: var(--transition);
   -ms-transition: var(--transition);
   -o-transition: var(--transition);
-  font-size: 2rem;
 }
 
 .hero-banner-social li a:hover svg {

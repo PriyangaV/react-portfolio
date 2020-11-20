@@ -1,12 +1,23 @@
 import React from "react";
 import { FaLinkedin, FaGithubSquare, FaStackOverflow } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import banner from "../assets/banner.jpg";
 // import { NavHashLink as NavLink } from "react-router-hash-link";
+
+const HeroContainer = styled.div`
+  min-height: 100vh;
+  background: linear-gradient(20deg, var(--theme-color-1), rgba(0, 0, 0, 0.7)),
+    url(${banner}) center/cover no-repeat fixed;
+  display: table-cell;
+  text-align: center;
+`;
 
 const header = () => {
   return (
     <header id='home' className='header-home'>
-      <div className='hero'>
+      {/* <div className='hero'> */}
+      <HeroContainer>
         <div className='hero-banner'>
           <h1 className='animate-top'>Hi, I'm Priyanga</h1>
           <p className='animate-top'>
@@ -61,7 +72,8 @@ const header = () => {
             <div className='icon-scroll'></div>
           </NavLink>
         </div>
-      </div>
+        {/* </div> */}
+      </HeroContainer>
     </header>
   );
 };

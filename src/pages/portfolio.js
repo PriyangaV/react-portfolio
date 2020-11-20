@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import project1 from "../assets/portfolio/thumb/project-1.png";
-import project2 from "../assets/portfolio/thumb/project-2.png";
+// import project2 from "../assets/portfolio/thumb/project-2.png";
 import project3 from "../assets/portfolio/thumb/project-3.png";
 import project4 from "../assets/portfolio/thumb/project-4.png";
 import project5 from "../assets/portfolio/thumb/project-5.png";
@@ -12,7 +12,7 @@ import project10 from "../assets/portfolio/thumb/project-10.png";
 import project11 from "../assets/portfolio/thumb/project-11.png";
 
 import proOne from "../assets/portfolio/large/project-1/1.png";
-import proTwo from "../assets/portfolio/large/project-2/1.png";
+// import proTwo from "../assets/portfolio/large/project-2/1.png";
 import proThree from "../assets/portfolio/large/project-3/1.png";
 import proFour from "../assets/portfolio/large/project-4/1.png";
 import proFive from "../assets/portfolio/large/project-5/1.png";
@@ -93,18 +93,18 @@ const Portfolio = () => {
       demoUrl: "https://backpackers-villa-react.herokuapp.com",
       githubUrl: "https://github.com/PriyangaV/backpackers-villa"
     },
-    {
-      id: 4,
-      category: "html-css-js",
-      src: project2,
-      screenshots: [proTwo],
-      title: "Finance",
-      desc:
-        "Every beginner’s coding journey in frontend starts with html and css and the best way to learn them is by practice. I found this site on the internet and did recreate using html, css and a little bit of javascript.",
-      stack: "html, css, javascript",
-      demoUrl: "https://finance-pro.netlify.app/",
-      githubUrl: "https://github.com/PriyangaV/finance-pro"
-    },
+    // {
+    //   id: 4,
+    //   category: "html-css-js",
+    //   src: project2,
+    //   screenshots: [proTwo],
+    //   title: "Finance",
+    //   desc:
+    //     "Every beginner’s coding journey in frontend starts with html and css and the best way to learn them is by practice. I found this site on the internet and did recreate using html, css and a little bit of javascript.",
+    //   stack: "html, css, javascript",
+    //   demoUrl: "https://finance-pro.netlify.app/",
+    //   githubUrl: "https://github.com/PriyangaV/finance-pro"
+    // },
     {
       id: 5,
       category: "html-css-js",
