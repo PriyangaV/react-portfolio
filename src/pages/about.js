@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../assets/profile.png";
+import profile from "../assets/profile.JPG";
 import { FaEnvelope, FaMapMarker, FaDownload } from "react-icons/fa";
 import cv from "../pv.pdf";
 
