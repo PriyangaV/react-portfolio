@@ -10,7 +10,7 @@ const HeroContainer = styled.div`
   display: table-cell;
   text-align: center;
   background: linear-gradient(20deg, var(--theme-color-1), rgba(0, 0, 0, 0.7)),
-    url(${banner}) center/cover no-repeat fixed;
+    url(${banner}) left/cover no-repeat fixed;
   /* background: linear-gradient(20deg, var(--theme-color-1), rgba(0, 0, 0, 0.7)),
     url(${banner});
   background-repeat: no-repeat;
