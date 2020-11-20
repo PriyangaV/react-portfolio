@@ -472,13 +472,7 @@ HERO
   display: table;
   min-height: 720px;
 }
-.hero {
-  min-height: 100vh;
-  background: linear-gradient(20deg, var(--theme-color-1), rgba(0, 0, 0, 0.7)),
-    url("../img/banner.jpg") center/cover no-repeat fixed;
-  display: table-cell;
-  text-align: center;
-}
+
 .hero-banner {
   text-align: center;
   color: var(--clr-white);
