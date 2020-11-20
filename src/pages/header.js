@@ -7,7 +7,7 @@ import banner from "../assets/banner.png";
 
 const HeroContainer = styled.div`
   min-height: 90vh;
-  width: 99vw;
+  min-width: 100vw;
   display: table-cell;
   text-align: center;
   background: linear-gradient(20deg, var(--theme-color-1), rgba(0, 0, 0, 0.7)),
