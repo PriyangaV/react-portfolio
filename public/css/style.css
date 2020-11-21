@@ -53,6 +53,8 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   background-color: var(--bg-black-50);
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
 }
 
 body.hidden-scrolling {
@@ -560,14 +562,14 @@ HERO
 }
 
 /* Scroll */
-.hero .icon-scroll,
-.hero .icon-scroll:before {
+.hero-banner .icon-scroll,
+.hero-banner .icon-scroll:before {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.hero .icon-scroll {
+.hero-banner .icon-scroll {
   width: 40px;
   height: 70px;
   margin-top: 80px;
@@ -576,7 +578,7 @@ HERO
   display: inline-block;
 }
 
-.hero .icon-scroll:before {
+.hero-banner .icon-scroll:before {
   background-color: var(--clr-white);
   content: "";
   width: 8px;
@@ -1670,7 +1672,7 @@ PORTFOLIO POPUP
 .back-to-top {
   visibility: hidden;
   opacity: 0;
-  position: fixed;
+  position: absolute;
   bottom: 3rem;
   right: 5%;
   z-index: 99;
