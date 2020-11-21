@@ -16,14 +16,13 @@ const HeroContainer = styled.div`
 
 const scrollWithOffset = (el) => {
   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-  const yOffset = 100;
+  const yOffset = 120;
   window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
 };
 
 const header = () => {
   return (
     <header id='home' className='header-home'>
-      {/* <div className='hero'> */}
       <HeroContainer>
         <div className='hero-banner'>
           <h1 className='animate-top'>Hi, I'm Priyanga</h1>
@@ -81,7 +80,6 @@ const header = () => {
             <div className='icon-scroll'></div>
           </NavLink>
         </div>
-        {/* </div> */}
       </HeroContainer>
     </header>
   );

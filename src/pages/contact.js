@@ -5,7 +5,6 @@ import {
   FaStackOverflow,
   FaChevronUp
 } from "react-icons/fa";
-import { NavHashLink as NavLink } from "react-router-hash-link";
 
 const Contact = () => {
   useEffect(() => {
