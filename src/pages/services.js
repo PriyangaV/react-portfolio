@@ -31,7 +31,7 @@ const Services = () => {
       title: "Backend JavaScript",
       subTitle: "Node.js, Express.js, Mongoose",
       description:
-        "The best tools for developing JS applications with minimal code that can run on any device."
+        "I use these tools to develop JS apps with minimal code that can run on any device."
     },
     {
       id: 4,
@@ -46,7 +46,7 @@ const Services = () => {
       title: "Agile/Scrum",
       subTitle: "Jira, Trello, Slack",
       description:
-        "I use agile/scrum methodologies and using collaboration tools such as Jira, Trello, Slack."
+        "I use these methodologies and using collaboration tools such as Jira, Trello, Slack."
     }
   ];
   return (

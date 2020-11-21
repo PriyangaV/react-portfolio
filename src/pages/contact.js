@@ -10,6 +10,13 @@ import { NavHashLink as NavLink } from "react-router-hash-link";
 const Contact = () => {
   useEffect(() => {
     const backToTopIcon = document.querySelector(".back-to-top");
+    backToTopIcon.addEventListener("click", () => {
+      window.scrollTo({
+        left: 0,
+        top: 0,
+        behavior: "smooth"
+      });
+    });
     document.addEventListener("scroll", function () {
       if (
         document.body.scrollTop > 1000 ||
@@ -77,16 +84,9 @@ const Contact = () => {
         <br />
         <br />
       </section>
-      <NavLink
-        to='#home'
-        replace
-        exact
-        smooth
-        className='back-to-top'
-        scroll={(el) => el.scrollIntoView({ behavior: "smooth", block: "end" })}
-      >
+      <button className='back-to-top'>
         <FaChevronUp />
-      </NavLink>
+      </button>
     </>
   );
 };

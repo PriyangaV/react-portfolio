@@ -11,7 +11,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scrollWithOffset = (el) => {
     const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -80;
+    const yOffset = 10;
     window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
     setIsOpen(false);
   };
