@@ -794,7 +794,7 @@ ABOUT
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 2rem;
 }
 .service {
   display: grid;
@@ -864,7 +864,7 @@ SERVICE
 --------------------- */
 
 .service .service-item-inner {
-  padding: 50px 15px;
+  padding: 3rem 1rem;
   border-radius: 5px;
   text-align: center;
   border: 1px solid var(--bg-black-100);
