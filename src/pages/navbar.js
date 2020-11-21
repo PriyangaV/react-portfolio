@@ -23,7 +23,7 @@ const Navbar = () => {
           id = e.target.getAttribute("href").slice(2);
         }
         const element = document.getElementById(id);
-        let position = element.offsetTop;
+        let position = element.offsetTop + 64;
         window.scrollTo({
           left: 0,
           top: position,
