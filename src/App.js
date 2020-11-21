@@ -22,28 +22,20 @@ const App = () => {
         let outerHeight = elem.offsetHeight;
         if (windowTop > offsetTop - 62 && windowTop < offsetTop + outerHeight) {
           let elemId = elem.getAttribute("id");
-          document.querySelector("nav ul li a.selected") &&
+          document.querySelector(".nav-links li.home .active") &&
             document
-              .querySelector("nav ul li a.selected")
-              .classList.remove("selected");
-          document.querySelector("nav ul li a[href='#/" + elemId + "']") &&
-            document
-              .querySelector("nav ul li a[href='#/" + elemId + "']")
-              .classList.add("selected");
-          history.replace(`${elemId}`);
+              .querySelector(".nav-links li.home .active")
+              .classList.remove("active");
+          if (`#${elemId}` !== history.location.hash) {
+            history.replace(`#${elemId}`);
+          }
         }
 
         // home selected
         if (windowTop === 0) {
-          document.querySelector("nav ul li a.selected") &&
-            document
-              .querySelector("nav ul li a.selected")
-              .classList.remove("selected");
-          document.querySelector("nav ul li a[href='#/home']") &&
-            document
-              .querySelector("nav ul li a[href='#/home']")
-              .classList.add("selected");
-          history.replace("home");
+          if ("#home" !== history.location.hash) {
+            history.replace("#home");
+          }
         }
 
         // contact selected
@@ -52,15 +44,9 @@ const App = () => {
             (element.documentElement && element.documentElement.scrollTop) ===
           (element.documentElement && element.documentElement.clientHeight)
         ) {
-          document.querySelector("nav ul li a.selected") &&
-            document
-              .querySelector("nav ul li a.selected")
-              .classList.remove("selected");
-          document.querySelector("nav ul li a[href='#/contact']") &&
-            document
-              .querySelector("nav ul li a[href='#/contact']")
-              .classList.add("selected");
-          history.replace("contact");
+          if ("#contact" !== history.location.hash) {
+            history.replace("#contact");
+          }
         }
       });
     };

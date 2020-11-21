@@ -1,37 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   FaLinkedin,
   FaGithubSquare,
   FaStackOverflow,
   FaBars
 } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
-// import { NavHashLink as NavLink } from "react-router-hash-link";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const scrollLinks = document.querySelectorAll(".scroll-link");
-    scrollLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        setIsOpen(false);
-        let id = null;
-        if (link.classList.contains("page-scroll")) {
-          id = e.target.parentElement.getAttribute("href").slice(2);
-        } else {
-          id = e.target.getAttribute("href").slice(2);
-        }
-        const element = document.getElementById(id);
-        let position = element.offsetTop - 64;
-        window.scrollTo({
-          left: 0,
-          top: position,
-          behavior: "smooth"
-        });
-      });
-    });
-  }, []);
+  const scrollWithOffset = (el) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = 350;
+    window.scrollTo({ top: yCoordinate - yOffset, behavior: "smooth" });
+    setIsOpen(false);
+  };
   return (
     <nav className='navbar'>
       <div className='nav-center'>
@@ -52,62 +35,74 @@ const Navbar = () => {
           className={`nav-links ${isOpen ? "show-links" : ""} `}
           id='nav-links'
         >
-          <li className='animate-left unreset'>
+          <li className='animate-left unreset home'>
             <NavLink
-              to='home'
+              to='#home'
               replace
-              className='nav-link scroll-link selected'
-              activeClassName='selected'
+              exact
+              smooth
+              className='nav-link scroll-link active'
+              scroll={(el) => scrollWithOffset(el)}
             >
               home
             </NavLink>
           </li>
           <li className='animate-top unreset'>
             <NavLink
-              to='about'
+              to='#about'
               replace
+              exact
+              smooth
               className='nav-link scroll-link'
-              activeClassName='selected'
+              scroll={(el) => scrollWithOffset(el)}
             >
               about
             </NavLink>
           </li>
           <li className='wait animate-bottom unreset'>
             <NavLink
-              to='services'
+              to='#services'
               replace
+              exact
+              smooth
               className='nav-link scroll-link'
-              activeClassName='selected'
+              scroll={(el) => scrollWithOffset(el)}
             >
               services
             </NavLink>
           </li>
           <li className='animate-right unreset'>
             <NavLink
-              to='resume'
+              to='#resume'
               replace
+              exact
+              smooth
               className='nav-link scroll-link'
-              activeClassName='selected'
+              scroll={(el) => scrollWithOffset(el)}
             >
               resume
             </NavLink>
           </li>
           <li className='animate-left unreset'>
             <NavLink
-              to='portfolio'
+              to='#portfolio'
               replace
+              exact
+              smooth
               className='nav-link scroll-link'
-              activeClassName='selected'
+              scroll={(el) => scrollWithOffset(el)}
             >
               portfolio
             </NavLink>
           </li>
           <li className='animate-right unreset'>
             <NavLink
-              to='contact'
+              to='#contact'
               replace
+              exact
+              smooth
               className='nav-link scroll-link'
-              activeClassName='selected'
+              scroll={(el) => scrollWithOffset(el)}
             >
               say hello
             </NavLink>
